@@ -12,6 +12,6 @@ class SpindlerBattery(Battery, ABC):
 
     def engine_should_be_serviced(self):
         engine_should_be_serviced = add_years_to_date(self.last_service_date, 2)
-        if engine_should_be_serviced < self.current_service_date:
+        if engine_should_be_serviced < self.current_date:
             return True
         return False
